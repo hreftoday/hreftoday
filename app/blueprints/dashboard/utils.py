@@ -17,7 +17,7 @@ def get_draft_links():
 
 def get_draft_links_count():
     draft = get_draft()
-    return len(set(draft.link_ids))
+    return len(set(draft.link_ids or []))
 
 def get_default_link_summary():
     links = get_draft_links()
